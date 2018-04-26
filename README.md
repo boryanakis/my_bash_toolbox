@@ -5,4 +5,8 @@ This repository is used as an archive for bash commands/tricks that I use infreq
 
 ### Contents
 
-1. Filter based on column
+1. Rename all files in a directory whose file names contain white spaces. 
+
+```bash 
+for f in *\ *; do mv "$f" "${f// /_}"; done
+```
