@@ -26,3 +26,10 @@ For example, when I want to replace the `.fastq` extension with `.fq`, I use thi
 ```bash
 rename .fastq .fq *.fastq
 ```
+
+4. Replace a string (`OLD`) with another string (`NEW`) in a file. `-i` means 'in-place', `s` is for 'substitution', and `g` means 'global'. [sed reference](http://www.grymoire.com/Unix/Sed.html) 
+
+```bash
+sed -i 's/OLD/NEW/g' file.txt
+```
+
