@@ -49,3 +49,15 @@ done < shoppingList.txt
 ``` bash
 grep -Fwf filter.txt big_list.txt >> filtered_big_list.txt
 ```
+
+7.  Get file size in human understandable unit. I used this in a script where I assign it to a variable so that it can be output later with other information.
+
+``` bash
+stat -c %s posfile | numfmt --to=si --suffix=B
+```
+
+8.  Print information to a tab-delimited file.
+
+``` bash
+printf "%s\t%s\n" "Data1" "Data2" >> filename.txt
+```
