@@ -29,7 +29,6 @@ END
 # VAR ASSIGNMENT --------------------------------------------------------
 PROJECT_ID="${1}"
 PARENT_DIR=$(realpath -s "${2:-${PWD}}")
-echo $PARENT_DIR
 FORCE=${3-false}
 
 if [[ "${FORCE}" == "false" ]]; then
