@@ -28,7 +28,7 @@ END
 
 # VAR ASSIGNMENT --------------------------------------------------------
 PROJECT_ID="${1}"
-PARENT_DIR=$(realpath -s "${2:-${PWD}}")
+PARENT_DIR=$(readlink -f "${2:-${PWD}}")
 FORCE=${3-false}
 
 if [[ "${FORCE}" == "false" ]]; then
