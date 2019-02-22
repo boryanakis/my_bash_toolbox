@@ -61,3 +61,9 @@ stat -c %s posfile | numfmt --to=si --suffix=B
 ``` bash
 printf "%s\t%s\n" "Data1" "Data2" >> filename.txt
 ```
+
+9. Get a list of sequence headers from a FASTA file and delete the `>` character.
+
+``` bash
+grep "^>" dmel-all-chromosome-r6.25.CHR_ARMS.fasta | tr -d '>' >> scripts/b018_mpileup_ARRAY_input.txt
+```
