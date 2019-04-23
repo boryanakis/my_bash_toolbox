@@ -63,6 +63,12 @@ elif [[ ! -d "${PARENT_DIR}" && "${fbool}" = true ]]; then
   mkdir -p "${PARENT_DIR}"
 fi
 
-mkdir -p ${PARENT_DIR}/${PROJECT_ID}/{data_raw,data_filtered,outputs,scripts,results,report_files}
+mkdir -p ${PARENT_DIR}/${PROJECT_ID}/{data_raw,data_filtered,scripts,refs}
+
+mkdir -p ${PARENT_DIR}/${PROJECT_ID}/outputs/{aln_samples,variants}
+
+mkdir -p ${PARENT_DIR}/${PROJECT_ID}/outputs/aln_samples/fastp
+
+mkdir -p ${PARENT_DIR}/${PROJECT_ID}/report_files/{aln_samples,variants}
 
 echo "Project initiated: [${PARENT_DIR}/${PROJECT_ID}]"
