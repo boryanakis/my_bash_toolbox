@@ -9,6 +9,7 @@ This script initiates a simple data analysis project. It generates the following
     ├── data_raw
     ├── outputs
     ├── report_files
+    ├── refs
     ├── results
     └── scripts
 
@@ -67,8 +68,6 @@ mkdir -p ${PARENT_DIR}/${PROJECT_ID}/{data_raw,data_filtered,scripts,refs}
 
 mkdir -p ${PARENT_DIR}/${PROJECT_ID}/outputs/{aln_samples,variants}
 
-mkdir -p ${PARENT_DIR}/${PROJECT_ID}/outputs/aln_samples/fastp
-
-mkdir -p ${PARENT_DIR}/${PROJECT_ID}/report_files/{aln_samples,variants}
+mkdir -p ${PARENT_DIR}/${PROJECT_ID}/report_files
 
 echo "Project initiated: [${PARENT_DIR}/${PROJECT_ID}]"
