@@ -67,3 +67,9 @@ printf "%s\t%s\n" "Data1" "Data2" >> filename.txt
 ``` bash
 grep "^>" dmel-all-chromosome-r6.25.CHR_ARMS.fasta | tr -d '>' >> scripts/b018_mpileup_ARRAY_input.txt
 ```
+
+10. Filter the lines in one file (`big_list.txt`), and discard lines found in a second file (`filter.txt`). The lines have to be unique in both files. This is the opposite of \#6. I use this to find the anti_join set of transcript or gene IDs from two files. The files have a single transcript/gene ID per line. Source: [StackOverflow](https://stackoverflow.com/a/18205289)
+
+```bash 
+diff --new-line-format="" --unchanged-line-format=""  big_list.txt filter.txt
+```
