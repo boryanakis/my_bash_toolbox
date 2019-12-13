@@ -73,3 +73,19 @@ grep "^>" dmel-all-chromosome-r6.25.CHR_ARMS.fasta | tr -d '>' >> scripts/b018_m
 ```bash 
 diff --new-line-format="" --unchanged-line-format=""  big_list.txt filter.txt
 ```
+
+11. Find common lines between two files. By default, the command shows the lines only in the right (1), only in the left (2), and in both (3) files. The following options can be used to suppress parts of the output: `-1` (hide the lines that are only in the left hand file), `-2` (hide the lines that are only in the right hand file), and `-3` (hide the lines that appear in both). It is a good idea to put the files through sorting and uniq (using `sort -u`).
+
+```bash 
+comm <(sort -u LEFT_FILE) <(sort -u RIGHT_FILE) # show me everything
+comm -23 <(sort -u LEFT_FILE) <(sort -u RIGHT_FILE) # show me the lines that are only found in the LEFT_FILE
+```
+
+12. Check if a file exists in an `if` statement.
+
+```bash
+if [ -f "$FILE" ]; then
+    echo "$FILE exist"
+fi
+```
+
